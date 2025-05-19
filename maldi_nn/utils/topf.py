@@ -59,7 +59,7 @@ class UnionFind:
             Number of vertices
         """
         self.n_vertices = n_vertices
-        self.parent = {x: x for x in range(n_vertices)}
+        self.parent = np.arange(n_vertices, dtype=np.int32)
 
     def find(self, u):
         """Find and return parent of `u`."""

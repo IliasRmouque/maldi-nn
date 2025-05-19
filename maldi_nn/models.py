@@ -327,7 +327,7 @@ class MaldiTransformer(MaldiLightningModule):
         self.auroc = BinaryAUROC()
         self.accuracy = MulticlassAccuracy(num_classes=n_classes, average="micro")
         self.top5_accuracy = MulticlassAccuracy(
-            num_classes=n_classes, top_k=5, average="micro"
+            num_classes=n_classes, top_k=2, average="micro"
         )
 
     def forward(self, batch):
